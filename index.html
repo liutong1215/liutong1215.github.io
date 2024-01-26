@@ -1,0 +1,115 @@
+<!doctype html>
+<html dir="ltr" lang="zh" chrome-refresh-2023>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>瞎同学与好奇猫奇遇记</title>
+    <style>
+        body {
+            background: #FFFFFF;
+            margin: 0;
+            width: 100%;
+        }
+
+        #backgroundImage {
+            border: none;
+            height: 100%;
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            visibility: hidden;
+            width: 100%;
+        }
+
+        [show-background-image] #backgroundImage {
+            visibility: visible;
+        }
+
+        .cat {
+            width: 200px;
+            height: 100%;
+            display: inline;
+        }
+
+        @media screen and (min-width: 1000px) {
+            .wrapper {
+                    min-width: 200px;
+                    max-width: 500px;
+                    text-align: center;
+                    margin: auto;
+                    width: 50%;
+                    padding: 10px;
+            }
+        }
+        @media screen and (min-width: 600px) {
+            .wrapper {
+                min-width: 200px;
+                max-width: 500px;
+                text-align: center;
+                margin: auto;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .left {
+            background-color: #ccc;
+            height: 100%;
+            width: 100px;
+            float: left;
+            display: inline;
+        }
+
+        .right {
+            float: left;
+            display: inline;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <br />
+        <h1>瞎同学与好奇猫奇遇记</h1>
+        <img src="assets/cat.jpg" class="cat" />
+        <hr />
+        <div class="box">
+            <div class="left">
+                <h2>DAY 1</h2>
+                2024/01/24
+            </div>
+            <div class="right">
+                🫂💋
+            </div>
+        </div>
+        <div class="box">
+            <div class="left">
+                <h2>DAY 2</h2>
+                2024/01/25
+            </div>
+            <div class="right">
+                估计近期是不会搭理我啦~<br/>少给添麻烦，好好过年吧！
+            </div>
+        </div>
+        <div class="box">
+            <div class="left">
+                <h2>DAY 3</h2>
+                2024/01/26
+            </div>
+            <div class="right">
+                不敢闲下来，闲下来就会想~<br/>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
