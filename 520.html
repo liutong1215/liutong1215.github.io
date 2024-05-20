@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>520</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            width: 200px; /* 调整整体宽度来适应形状 */
+            height: 400px; /* 调整整体高度来适应形状 */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .char {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+            font-size: 1rem;
+            position: absolute;
+            color: #FF69B4;
+        }
+        /* 定义字符的最终位置，以下只是一个大致布局的示例 */
+        .char:nth-child(1) { top: 20px; left: 30px; }
+        .char:nth-child(2) { top: 20px; left: 50px; }
+        .char:nth-child(3) { top: 30px; left: 70px; }
+        .char:nth-child(4) { top: 40px; left: 90px; }
+        .char:nth-child(5) { top: 30px; left: 110px; }
+        .char:nth-child(6) { top: 20px; left: 130px; }
+        .char:nth-child(7) { top: 20px; left: 150px; }
+        .char:nth-child(8) { top: 30px; left: 170px; }
+        .char:nth-child(9) { top: 50px; left: 180px; }
+        .char:nth-child(10) { top: 70px; left: 170px; }
+
+        .char:nth-child(11) { top: 90px; left: 160px; }
+
+        .char:nth-child(12) { top: 110px; left: 140px; }
+
+        .char:nth-child(13) { top: 130px; left: 120px; }
+
+        .char:nth-child(14) { top: 150px; left: 90px; }
+
+        .char:nth-child(15) { top: 130px; left: 60px; }
+
+        .char:nth-child(16) { top: 110px; left: 40px; }
+
+        .char:nth-child(17) { top: 90px; left: 20px; }
+
+        .char:nth-child(18) { top: 70px; left: 10px; }
+
+        .char:nth-child(19) { top: 50px; left: 0px; }
+
+        .char:nth-child(20) { top: 30px; left: 10px; }
+
+        .char:nth-child(21) { top: 140px; left: 120px; }
+        .char:nth-child(22) { top: 100px; left: 120px; }
+        .char:nth-child(23) { top: 60px; left: 120px; }
+        .char:nth-child(24) { top: 20px; left: 120px; }
+        .char:nth-child(25) { top: 20px; left: 140px; }
+        .char:nth-child(26) { top: 20px; left: 160px; }
+    </style>
+</head>
+<body>
+    <div class="container" id="textContainer">
+        <!-- 在这里插入每个字符 -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "我爱你●与你无关●我爱你●全部与你有关●";
+            const container = document.getElementById('textContainer');
+
+            // 将每个字符添加到容器中
+            text.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char;
+                span.classList.add('char');
+                container.appendChild(span);
+            });
+
+            // 动画效果
+            const chars = document.querySelectorAll('.char');
+            chars.forEach((char, index) => {
+                setTimeout(() => {
+                    char.style.opacity = 1;
+                    char.style.transform = 'translateY(0)';
+                }, index * 50);
+            });
+        });
+    </script>
+</body>
+</html>
